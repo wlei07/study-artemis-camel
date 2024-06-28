@@ -1,3 +1,8 @@
+# Camel could also send message to Artemis
+app:
+  queue:
+    consume: "jms:queue:Q.Test"
+    produce: "jms:queue:RECEIVER_QUEUE"
 spring:
   application:
     name: artemis-study
@@ -7,11 +12,6 @@ spring:
 #    mode: native
     user: admin
     password: test
+# Spring could send message directly to Artemis
 jms:
   queue: Q.Test
-
-# for camel
-app:
-  queue:
-    consume: "jms:queue:CONSUMER_QUEUE"
-    produce: "jms:queue:RECEIVER_QUEUE"

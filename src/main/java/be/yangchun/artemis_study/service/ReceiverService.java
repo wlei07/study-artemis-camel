@@ -7,8 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 public class ReceiverService {
-
-    @JmsListener(destination = "${jms.queue}")
+    //@JmsListener(destination = "${jms.queue}")
     public void receiveMessage(String message) {
         log.info("Received message: {}", message);
     }
